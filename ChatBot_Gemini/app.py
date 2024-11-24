@@ -3,11 +3,13 @@ from urllib import response
 import google.generativeai as genai
 import PIL.Image
 from properties import api_key, to_markdown
+from dotenv import load_dotenv
+import os
 
 
 def main():
     # Config the API 
-    genai.configure(api_key=api_key)
+    genai.configure(api_key=os.getenv('SECRET_KEY'))
 
     # Establecemos el modelo que vamos a usar
     model = genai.GenerativeModel("gemini-1.5-flash")

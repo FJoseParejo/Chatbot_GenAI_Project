@@ -1,7 +1,5 @@
 import textwrap
 
-api_key= ""
-
 
 def to_markdown(text):
     text = text.replace("•", "  *")
